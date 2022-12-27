@@ -13,13 +13,14 @@ class Solution {
         for(int i=0; i<array.length; i++) {
             count[array[i]]++; //각 수의 index에 count
         }
+        
         max=count[0];
         // 가장 큰 count 값을 max로 설정
         
         for(int i=1; i<count.length; i++) {
             if(max<count[i]){
                 max=count[i];
-                answer=i; // max 값이 바뀔 때의 최빈값
+                answer=i; // max 값이 바뀔 때의 index(최빈값)
             } else if(max==count[i]) { // 최빈값이 여러 개인 경우 -1 return
                 answer=-1;
             }
